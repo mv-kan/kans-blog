@@ -1,0 +1,6 @@
+.logo {
+    color: var(--heading-black);
+}
+.logo span {
+    color: var(--primary-accent);
+}

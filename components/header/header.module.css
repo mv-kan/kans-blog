@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+  background-color: var(--primary-background);
+}
+
+.menuToggler {
+  font-size: 3rem;  
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	outline: inherit;
+}
+
+.menuToggler:focus {
+  outline: none;
+}
+
+.menuIcon {
+  font-size: 2rem;
+}

@@ -1,0 +1,5 @@
+.logoSize {
+    font-size: var(--text-lg);
+    font-family: var(--heading-font-family);
+}
+

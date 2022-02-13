@@ -1,12 +1,8 @@
-import Logo from "../logo/logo"
 import Head from "next/head"
-import Header from '../header/header'
+import Header from '../header'
 import { useState } from 'react'
 
 export default function Layout() {
-    
-
-
     return (
         <div>
             <Head>

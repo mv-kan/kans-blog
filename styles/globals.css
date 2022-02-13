@@ -1,4 +1,5 @@
 :root {
+  --heading-color: #0A0908;
   --heading-black: #0A0908;
   --primary-black: #1f2937;
   --primary-white: #f9fafb;
@@ -62,4 +63,8 @@ a {
 
 .hidden {
   display: none !important;
+}
+
+.absolute {
+  position: absolute !important;
 }

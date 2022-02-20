@@ -1,0 +1,7 @@
+
+@media screen and (min-width: 1024px) {
+    .layout {
+        width: var(--layout-width-desktop);
+        margin: auto;
+    }
+}

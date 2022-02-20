@@ -6,7 +6,8 @@ import 'material-icons/iconfont/material-icons.css';
 
 import Logo from "../logo";
 import MobileNav from '../mobile-nav';
-import styles from './header.module.css'
+import DesktopNav from '../desktop-nav';
+import styles from './header.module.css';
 
 export default function Header() {
     const [navToggled, setNavToggled] = useState(false);
@@ -19,16 +20,21 @@ export default function Header() {
     api.start({height: navToggled ? '500px' : '0px'})
     
     return (
-        <header className={styles.header}>
-            <Logo></Logo>
-            <button className={styles.menuToggler} onClick={handleNavToggle}>
-                <span className={`${styles.openIcon} ${navToggled ? 'hidden' : ''} material-icons-round`}>menu</span>
-            </button>
-            <animated.div style={animationStyles} className={styles.mobileNavWrapper}>
-                <MobileNav closeNavHandle={handleNavToggle}/>
-            </animated.div>
-            {/* <div className={navToggled ? 'absolute' : 'hidden'}>
-            </div> */}
-        </header>
+        <div className={styles.headerWrapper}>
+            <header className={styles.header}>
+                <Logo></Logo>
+                <div className={styles.mobileMenu}>
+                    <button className={styles.menuToggler} onClick={handleNavToggle}>
+                        <span className={`${styles.openIcon} material-icons-round`}>menu</span>
+                    </button>
+                    <animated.div style={animationStyles} className={styles.mobileNavWrapper}>
+                        <MobileNav closeNavHandle={handleNavToggle} />
+                    </animated.div>
+                </div>
+                <div className={styles.desktopMenu}>
+                    <DesktopNav></DesktopNav>
+                </div>
+            </header>
+        </div>
     )
 }

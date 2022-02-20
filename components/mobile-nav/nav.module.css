@@ -26,6 +26,7 @@
 
 .menuToggler {
   background: none;
+  cursor: pointer;
 	color: inherit;
 	border: none;
 	padding: 0;

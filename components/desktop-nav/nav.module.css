@@ -1,0 +1,13 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.navLink {
+    font-family: var(--heading-font-family);
+    font-weight: bold;
+    font-size: var(--text-md);
+    color: var(--heading-color);
+    display: inline-block;
+    margin: 0rem 0.75rem;
+}

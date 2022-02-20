@@ -1,0 +1,60 @@
+.section {
+    padding: 3rem 0;
+}
+
+.profilePictureWrapper {
+    height: 220px;
+    width: 220px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.contacts {
+    height: 500px;
+    background-color: rgba(100,100,100,0.5);
+    position: relative;
+    z-index: 10;
+    padding: 2rem 0;
+    color: var(--primary-foreground-inv);
+}
+.contacts::before {
+    content: '';
+    background-color: var(--primary-background-inv);
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    height: 100%;
+    width: 100vw;
+    transform: translate(-50%, 0);
+    z-index: -1;
+}
+.contactsHeader {
+    color: var(--primary-foreground-inv);
+}
+
+.listOfContacts {
+    font-family: var(--caption-font-family);
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 4rem; */
+}
+.listOfContacts li {
+    margin-top: 1rem;
+    /* prevent from "a" tag stretching */
+    display: inline-block; 
+}
+
+.contactLink div{
+    margin-right: 7px;
+    display: flex;
+}
+
+.contactLink span:first-child {
+    margin-right: 7px;
+}
+.contactLink:hover span:last-child{
+    text-decoration: underline;
+}

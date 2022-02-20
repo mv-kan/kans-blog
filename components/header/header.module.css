@@ -9,6 +9,9 @@
 .headerWrapper {
   background-color: var(--primary-background);
   position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
 .menuToggler {
   background: none;
@@ -68,6 +71,5 @@
 
   .headerWrapper {
     width: 100vw;
-    left: 0;
   }
 }

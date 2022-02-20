@@ -3,3 +3,45 @@
     font-family: var(--heading-font-family);
 }
 
+.bodyText {
+    font-family: var(--text-font-family);
+    line-height: 1.5em;
+    font-size: var(--text-base);
+    color: var(--primary-foreground);
+}
+
+.h1Text {
+    font-family: var(--heading-font-family);
+    font-size: var(--text-5xl);
+    letter-spacing: -1.5px;
+    font-weight: lighter;
+}
+
+.h2Text {
+    font-family: var(--heading-font-family);
+    font-size: var(--text-4xl);
+    letter-spacing: -0.5px;
+    font-weight: lighter;
+}
+
+.h3Text {
+    font-family: var(--heading-font-family);
+    font-size: var(--text-3xl);
+}
+
+.h4Text {
+    font-family: var(--heading-font-family);
+    font-size: var(--text-2xl);
+    letter-spacing: 0.25px;
+}
+
+.buttonText {
+
+}
+
+@media screen and (min-width: 1024px) {
+    .layoutContent {
+        width: var(--width-sm);
+        margin: auto;
+    }   
+}

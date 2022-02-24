@@ -1,15 +1,4 @@
-.section {
-    padding: 3rem 0;
-}
 
-.profilePictureWrapper {
-    height: 220px;
-    width: 220px;
-    overflow: hidden;
-    border-radius: 50%;
-}
-
-/* contacts section */
 .contacts {
     height: 500px;
     position: relative;

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Layout from '../components/layout'
+import Contacts from '../components/contacts'
 import utilStyles from '../styles/utils.module.css'
 import styles from '../styles/home.module.css'
 import profilePicture from '../public/images/profile.jpg';
@@ -25,7 +26,7 @@ export default function Home() {
           <h2>
             Greetings!
           </h2>
-          <span>
+          <span className={utilStyles.bodyText}>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit quas iste quaerat porro eos earum repudiandae fuga, ipsum ea a aperiam quo eligendi ducimus quis, suscipit tempora, blanditiis maxime omnis.
           </span>
         </section>
@@ -36,11 +37,11 @@ export default function Home() {
             />
           </div>
           <h4>Michael Kan</h4>
-          <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit quas iste quaerat porro eos earum repudiandae fuga, ipsum ea a aperiam quo eligendi ducimus quis, suscipit tempora, blanditiis maxime omnis.</span>
+          <span className={utilStyles.bodyText}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit quas iste quaerat porro eos earum repudiandae fuga, ipsum ea a aperiam quo eligendi ducimus quis, suscipit tempora, blanditiis maxime omnis.</span>
         </section>
       </div>
-      <section className={`${styles.contacts}`}>
-        <h4 className={styles.contactsHeader}>Contacts</h4>
+      {/* <section className={`${styles.contacts}`}>
+        <h3 className={`${utilStyles.invTextColor}`}>Contacts</h3>
         <ul className={styles.listOfContacts}>
           <li>
             <ContactLink
@@ -61,7 +62,8 @@ export default function Home() {
               href={'mailto:michael.kan.mail@gmail.com'} />
           </li>
         </ul>
-      </section>
+      </section> */}
+      <Contacts></Contacts>
     </Layout>
   )
 }

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useSpring, animated } from 'react-spring'
 
-import Link from "next/link";
 import 'material-icons/iconfont/material-icons.css';
 
 import Logo from "../logo";

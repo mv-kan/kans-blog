@@ -39,6 +39,15 @@
 
 }
 
+.invTextColor {
+    color: var(--primary-foreground-inv)
+}
+
+.noneHeaderMargin {
+    margin-block-end: 0em;
+    margin-block-start: 0em;
+}
+
 @media screen and (min-width: 1024px) {
     .layoutContent {
         width: var(--width-sm);

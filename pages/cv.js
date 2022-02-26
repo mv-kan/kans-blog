@@ -17,13 +17,13 @@ export default function CV() {
             loop: { reverse: true },
             to: { y: 10 },
             from: { y: 0 },
-            delay: 200
+            delay: 300
         }
     )
 
 
     return (
-        <div>
+        <div className={styles.cvLayout}>
             <Head>
                 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto+Slab:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet"></link>
             </Head>
@@ -34,10 +34,10 @@ export default function CV() {
                     Resume
                 </span>
                 <animated.div style={animationStyles} className={styles.arrow}>
-                    <span className={`material-icons-round ${styles.arrowIcon}`}>keyboard_arrow_down</span>
+                    <span className={`material-icons ${styles.arrowIcon}`}>keyboard_arrow_down</span>
                 </animated.div>
             </section>
-            <section className={`${styles.section} ${styles.profileSection}`}>
+            <section className={`${styles.section} ${styles.profileSection} ${utilStyles.layoutContent}`}>
                 <div className={styles.profilePictureWrapper}>
                     <Image
                         src={profilePicture}
@@ -51,7 +51,7 @@ export default function CV() {
                     Experience
                 </h3>
             </div>
-            <section className={`${styles.section} ${styles.infoSection}`}>
+            <section className={`${styles.section} ${styles.infoSection} ${utilStyles.layoutContent}`}>
                 <div>
                     <h5>Lorem ipsum, dolor sit</h5>
                     <span className={utilStyles.bodyText}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium iste tempore error numquam sit, vitae distinctio nostrum voluptatem ab explicabo sed architecto natus dicta, blanditiis delectus molestias reiciendis earum quas.</span>

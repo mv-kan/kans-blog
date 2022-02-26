@@ -1,16 +1,28 @@
 .section {
-    padding: 0 1rem;
+    padding: 0;
 }
 
 .heroSection {
     height: 100vh;
-    width: 100vw;
-    background-color: var(--primary-background-inv);
     color: var(--primary-foreground-inv);   
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 1rem;
     position: relative;
+    z-index: 0;
+}
+
+.heroSection::before {
+    content: '';
+    background-color: var(--primary-background-inv);
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    z-index: -1;
 }
 
 .heroHeader {
@@ -21,9 +33,10 @@
 }
  
 .arrow {
+    z-index: 100;
     position: absolute;
     bottom: 2rem;
-    right: 2rem;
+    right: 1rem;
 }
 
 .arrowIcon {
@@ -40,7 +53,21 @@
 .signboard {
     color: var(--primary-foreground-inv);
     background-color: var(--primary-background-inv);
-    padding: 2rem 1rem;
+    padding: 1.5rem 0;
+    position: relative;
+    z-index: 1;
+}
+.signboard::before {
+    content: '';
+    background-color: var(--primary-background-inv);
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    z-index: -1;
 }
 
 .profileSection {
@@ -50,4 +77,29 @@
 
 .infoSection {
     padding-bottom: 3rem;
+}
+
+.cvLayout {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .cvLayout {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  } 
+}
+@media screen and (min-width: 1024px) {
+    .heroHeader {
+        font-size: var(--text-5xl);
+    }
+    .cvLayout {
+        width: var(--layout-width-desktop);
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .signboard {
+        margin-top: 3.5rem;
+        margin-bottom: 3.5rem;
+    }
 }

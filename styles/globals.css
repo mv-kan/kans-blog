@@ -1,76 +1,80 @@
 :root {
-  --heading-color: #0A0908;
-  --heading-black: #0A0908;
-  --primary-black: #1f2937;
-  --primary-white: #f9fafb;
-  --primary-accent: #DB4424;
-  --primary-foreground: #1f2937;
-  --primary-background: #f9fafb;
-  /* inv stands for inverted light theme inverted to dark theme */
-  --primary-background-inv: #151515; 
-  --primary-foreground-inv: #EEEEEE;
-  /* --accent-max: #292442;
+    --heading-color: #0A0908;
+    --heading-black: #0A0908;
+    --primary-black: #1f2937;
+    --primary-white: #f9fafb;
+    --primary-accent: #DB4424;
+    --primary-foreground: #1f2937;
+    --primary-background: #f9fafb;
+    /* inv stands for inverted light theme inverted to dark theme */
+    --primary-background-inv: #151515;
+    --primary-foreground-inv: #EEEEEE;
+    /* --accent-max: #292442;
   --accent-high: #5b43c4;
   --accent-low: #e6e1fd;
   --accent-min: #f5f3ff; */
-  --foreground-hover: #b6b6b6;
-  --foreground-max: #374151;
-  --foreground-high: #9ca3af;
-  --foreground-low: #e6e6e6;
-  --foreground-min: #f3f3f3;
-  --primary-error: #c50000;
-  --border-radius: 2px;
-  --box-shadow-large: 0 2.8px 2.2px rgba(0,0,0,0.02),0 6.7px 5.3px rgba(0,0,0,0.028),0 12.5px 10px rgba(0,0,0,0.035),0 22.3px 17.9px rgba(0,0,0,0.042),0 41.8px 33.4px rgba(0,0,0,0.05),0 100px 80px rgba(0,0,0,0.07);
-  --text-5xl: calc(64 / 16 * 1rem);
-  --text-4xl: calc(48 / 16 * 1rem);
-  --text-3xl: calc(36 / 16 * 1rem);
-  --text-2xl: calc(30 / 16 * 1rem);
-  --text-xl: calc(24 / 16 * 1rem);
-  --text-lg: calc(20 / 16 * 1rem);
-  --text-md: calc(18 / 16 * 1rem);
-  --text-base: calc(16 / 16 * 1rem);
-  --text-sm: calc(14 / 16 * 1rem);
-  --text-xs: calc(12 / 16 * 1rem);
-  --text-xxs: calc(10 / 16 * 1rem);
-  --width-sm: 640px;
-  --width-md: 768px;
-  --width-lg: 1024px;
-  --layout-width-desktop: 940px;
-  --width-xl: 1280px;
-  --width-2xl: 1536px;
-
-  --text-font-family: 'Roboto Slab', serif;
-  --heading-font-family: 'Open Sans', sans-serif;
-  --caption-font-family: 'Roboto', sans-serif;
-  --text-light: 300;
+    --foreground-hover: #b6b6b6;
+    --foreground-max: #374151;
+    --foreground-high: #9ca3af;
+    --foreground-low: #e6e6e6;
+    --foreground-min: #f3f3f3;
+    --primary-error: #c50000;
+    --border-radius: 2px;
+    --box-shadow-large: 0 2.8px 2.2px rgba(0, 0, 0, 0.02), 0 6.7px 5.3px rgba(0, 0, 0, 0.028), 0 12.5px 10px rgba(0, 0, 0, 0.035), 0 22.3px 17.9px rgba(0, 0, 0, 0.042), 0 41.8px 33.4px rgba(0, 0, 0, 0.05), 0 100px 80px rgba(0, 0, 0, 0.07);
+    --text-5xl: calc(64 / 16 * 1rem);
+    --text-4xl: calc(48 / 16 * 1rem);
+    --text-3xl: calc(36 / 16 * 1rem);
+    --text-2xl: calc(30 / 16 * 1rem);
+    --text-xl: calc(24 / 16 * 1rem);
+    --text-lg: calc(20 / 16 * 1rem);
+    --text-md: calc(18 / 16 * 1rem);
+    --text-base: calc(16 / 16 * 1rem);
+    --text-sm: calc(14 / 16 * 1rem);
+    --text-xs: calc(12 / 16 * 1rem);
+    --text-xxs: calc(10 / 16 * 1rem);
+    --width-sm: 640px;
+    --width-md: 768px;
+    --width-lg: 1024px;
+    --layout-width-desktop: 940px;
+    --width-xl: 1280px;
+    --width-2xl: 1536px;
+    --text-font-family: 'Roboto Slab', serif;
+    --heading-font-family: 'Open Sans', sans-serif;
+    --caption-font-family: 'Roboto', sans-serif;
+    --text-light: 300;
 }
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: var(--text-font-family);
-  background-color: var(--primary-background);
-  color: var(--primary-foreground);
-  letter-spacing: 0.5px;
-  overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    font-family: var(--text-font-family);
+    background-color: var(--primary-background);
+    color: var(--primary-foreground);
+    letter-spacing: 0.5px;
+    /* overflow-x: hidden; position sticky does not work along with this */
+}
+
+body {
+    /* only for body for sticky to work, (div outside bg is causing overflow x)  */
+    overflow-x: hidden;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .hidden {
-  display: none !important;
+    display: none !important;
 }
 
 .absolute {
-  position: absolute !important;
+    position: absolute !important;
 }
 
 h1 {
@@ -123,5 +127,5 @@ h5 {
 }
 
 ul {
-  margin: 0;  
+    margin: 0;
 }

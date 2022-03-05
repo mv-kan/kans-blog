@@ -27,7 +27,7 @@ export default function Header() {
                         <span className={`${styles.openIcon} material-icons-round`}>menu</span>
                     </button>
                     <animated.div style={animationStyles} className={styles.mobileNavWrapper}>
-                        <MobileNav closeNavHandle={handleNavToggle} />
+                        <MobileNav closeNavHandle={handleNavToggle} navToggled={navToggled} />
                     </animated.div>
                 </div>
                 <div className={styles.desktopMenu}>

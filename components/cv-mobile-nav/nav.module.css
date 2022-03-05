@@ -1,0 +1,71 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    background-color: var(--primary-accent);
+    /* position: fixed; with this the animation is not working */
+    /* top: 0;
+    left: 0; */
+    /* width: 100%; */
+}
+
+.navLink {
+    font-family: var(--heading-font-family);
+    font-weight: bold;
+    font-size: var(--text-md);
+    margin: 0.625rem 0rem;
+    color: white;
+    display: inline-block;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.2rem;
+}
+
+.closeIcon {
+    color: white;
+    font-size: 1.75rem;
+}
+
+.topHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menuToggler {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.menuToggler:focus {
+    outline: none;
+}
+
+.mobileNavWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.mobileMenu {
+    width: 100vw;
+    padding: 1.5rem 1rem;
+}
+
+@media screen and (min-width: 640px) {
+    .mobileMenu {
+        display: none;
+    }
+}

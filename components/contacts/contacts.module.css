@@ -1,4 +1,3 @@
-
 .contacts {
     height: 500px;
     position: relative;
@@ -6,6 +5,7 @@
     padding: 2rem 0;
     color: var(--primary-foreground-inv);
 }
+
 .contacts::before {
     content: '';
     background-color: var(--primary-background-inv);
@@ -27,20 +27,23 @@
     flex-direction: column;
     /* margin-top: 4rem; */
 }
+
 .listOfContacts li {
     margin-top: 1rem;
     /* prevent from "a" tag stretching */
-    display: inline-block; 
+    display: inline-block;
 }
 
-.contactLink div{
+.contactLink div {
     margin-right: 7px;
     display: flex;
+    align-items: center;
 }
 
 .contactLink span:first-child {
     margin-right: 7px;
 }
-.contactLink:hover span:last-child{
+
+.contactLink:hover span:last-child {
     text-decoration: underline;
 }

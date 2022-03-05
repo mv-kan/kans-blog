@@ -2,6 +2,7 @@ import styles from '../styles/cv.module.css'
 import utilStyles from '../styles/utils.module.css'
 
 import Contacts from '../components/contacts'
+import CvNav from '../components/cv-nav'
 
 import Head from 'next/head'
 import Image from 'next/image'
@@ -27,6 +28,7 @@ export default function CV() {
             <Head>
                 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto+Slab:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet"></link>
             </Head>
+
             <section className={styles.heroSection}>
                 <span className={styles.heroHeader}>
                     Michael Kan
@@ -37,6 +39,7 @@ export default function CV() {
                     <span className={`material-icons ${styles.arrowIcon}`}>keyboard_arrow_down</span>
                 </animated.div>
             </section>
+            <CvNav></CvNav>
             <section className={`${styles.section} ${styles.profileSection} ${utilStyles.layoutContent}`}>
                 <div className={styles.profilePictureWrapper}>
                     <Image

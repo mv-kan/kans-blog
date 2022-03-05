@@ -1,0 +1,15 @@
+.cvnav {
+    /* left 0 */
+    margin-left: -1rem;
+    background-color: var(--primary-background);
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+}
+
+@media screen and (min-width: 768px) {
+    .cvnav {
+        padding: 1.5rem 3rem;
+    }
+}

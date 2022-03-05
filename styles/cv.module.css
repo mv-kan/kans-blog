@@ -4,7 +4,7 @@
 
 .heroSection {
     height: 100vh;
-    color: var(--primary-foreground-inv);   
+    color: var(--primary-foreground-inv);
     display: flex;
     align-items: center;
     padding: 1rem 1rem;
@@ -26,12 +26,12 @@
 }
 
 .heroHeader {
-    color: var(--primary-foreground-inv);   
+    color: var(--primary-foreground-inv);
     font-family: var(--heading-font-family);
     font-weight: var(--text-light);
     font-size: var(--text-4xl);
 }
- 
+
 .arrow {
     z-index: 100;
     position: absolute;
@@ -43,6 +43,7 @@
     font-size: 3rem !important;
     cursor: default;
 }
+
 .profilePictureWrapper {
     height: 220px;
     width: 220px;
@@ -57,6 +58,7 @@
     position: relative;
     z-index: 1;
 }
+
 .signboard::before {
     content: '';
     background-color: var(--primary-background-inv);
@@ -83,12 +85,14 @@
     margin-left: 1rem;
     margin-right: 1rem;
 }
+
 @media screen and (min-width: 768px) {
-  .cvLayout {
-    margin-left: 3rem;
-    margin-right: 3rem;
-  } 
+    .cvLayout {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
 }
+
 @media screen and (min-width: 1024px) {
     .heroHeader {
         font-size: var(--text-5xl);

@@ -2,9 +2,7 @@ import LogoInv from "../logo-inv"
 import { NavList } from "../nav-list"
 import styles from './nav.module.css'
 
-
-
-export default function MobileNav({closeNavHandle}) {
+export default function MobileNav({ closeNavHandle }) {
     return (
         <div className={`${styles.header}`}>
             <div className={styles.topHeader}>

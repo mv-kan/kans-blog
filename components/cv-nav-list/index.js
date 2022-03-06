@@ -1,9 +1,15 @@
-export default function CvNavList({ navClassName, linkClassName }) {
+export default function CvNavList({ navClassName, linkClassName, clickHandler }) {
     return (
         <nav className={navClassName}>
-            <a href="#profile" className={linkClassName}>Profile</a>
-            <a href="#experience" className={linkClassName}>Experience</a>
-            <a href="#contacts" className={linkClassName}>Contacts</a>
+            <div>
+                <a href="#profile" className={linkClassName} onClick={clickHandler}>Profile</a>
+            </div>
+            <div>
+                <a href="#experience" className={linkClassName} onClick={clickHandler}>Experience</a>
+            </div>
+            <div>
+                <a href="#contacts" className={linkClassName} onClick={clickHandler}>Contacts</a>
+            </div>
         </nav>
     )
 }

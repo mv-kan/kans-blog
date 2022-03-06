@@ -55,6 +55,10 @@ body {
     /* overflow-x: hidden; position sticky does not work along with this */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     /* only for body for sticky to work, (div outside bg is causing overflow x)  */
     overflow-x: hidden;

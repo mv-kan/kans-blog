@@ -21,7 +21,10 @@ export default function CvMobileNav({ handleNavToggle, navToggled }) {
                             <span className={`${styles.closeIcon} material-icons-round`}>close</span>
                         </button>
                     </div>
-                    <CvNavList navClassName={styles.nav} linkClassName={styles.navLink}></CvNavList>
+                    <CvNavList 
+                        navClassName={styles.nav} 
+                        linkClassName={styles.navLink} 
+                        clickHandler={handleNavToggle}></CvNavList>
                 </div>
             </animated.div>
         </div>

@@ -3,10 +3,6 @@
     flex-direction: column;
     padding: 1.5rem 1rem;
     background-color: var(--primary-accent);
-    /* position: fixed; with this the animation is not working */
-    /* top: 0;
-    left: 0; */
-    /* width: 100%; */
 }
 
 .navLink {
@@ -24,7 +20,8 @@
     margin-top: 2.2rem;
 }
 
-.closeIcon {
+.closeIcon,
+.openIcon {
     color: white;
     font-size: 1.75rem;
 }
@@ -46,6 +43,7 @@
     align-items: center;
     justify-content: center;
     margin-left: auto;
+    color: var(--primary-foreground-inv);
 }
 
 .menuToggler:focus {
@@ -60,7 +58,7 @@
 }
 
 .mobileMenu {
-    width: 100vw;
+    /* width: 100vw; */
     padding: 1.5rem 1rem;
 }
 

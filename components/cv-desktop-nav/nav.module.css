@@ -1,0 +1,17 @@
+.desktopNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navLink {
+    height: 75px;
+    height: 150px;
+    font-family: var(--heading-font-family);
+    font-weight: bold;
+    font-size: var(--text-md);
+    margin: 0.625rem 0rem;
+    color: white;
+    display: inline-block;
+}

@@ -40,7 +40,7 @@ export default function CV() {
                 </animated.div>
             </section>
             <CvNav></CvNav>
-            <section className={`${styles.section} ${styles.profileSection} ${utilStyles.layoutContent}`}>
+            <section className={`${styles.section} ${styles.profileSection} ${utilStyles.layoutContent}`} id="profile">
                 <div className={styles.profilePictureWrapper}>
                     <Image
                         src={profilePicture}
@@ -49,7 +49,7 @@ export default function CV() {
                 <h4>Michael Kan</h4>
                 <span className={utilStyles.bodyText}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit quas iste quaerat porro eos earum repudiandae fuga, ipsum ea a aperiam quo eligendi ducimus quis, suscipit tempora, blanditiis maxime omnis.</span>
             </section>
-            <div className={styles.signboard}>
+            <div className={`${styles.signboard}`} id='experience'>
                 <h3 className={`${utilStyles.noneHeaderMargin} ${utilStyles.invTextColor}`}>
                     Experience
                 </h3>

@@ -13,29 +13,29 @@ const ContactLink = ({ text, icon, href }) => {
     )
 }
 
-export default function Contacts() { 
+export default function Contacts() {
     return (
-    <section className={`${styles.contacts}`}>
-        <h3 className={`${utilStyles.invTextColor}`}>Contacts</h3>
-        <ul className={styles.listOfContacts}>
-            <li>
-                <ContactLink
-                    text={'michael.kan.mail@gmail.com'}
-                    icon={<span className='material-icons-round'>mail</span>}
-                    href={'mailto:michael.kan.mail@gmail.com'} />
-            </li>
-            <li>
-                <ContactLink
-                    text={'michael.kan.mail@gmail.com'}
-                    icon={<span className='material-icons-round'>mail</span>}
-                    href={'mailto:michael.kan.mail@gmail.com'} />
-            </li>
-            <li>
-                <ContactLink
-                    text={'michael.kan.mail@gmail.com'}
-                    icon={<span className='material-icons-round'>mail</span>}
-                    href={'mailto:michael.kan.mail@gmail.com'} />
-            </li>
-        </ul>
-    </section>)
+        <section className={`${styles.contacts} ${utilStyles.layoutMargin}`} id="contacts">
+            <h3 className={`${utilStyles.invTextColor}`}>Contacts</h3>
+            <ul className={styles.listOfContacts}>
+                <li>
+                    <ContactLink
+                        text={'michael.kan.mail@gmail.com'}
+                        icon={<span className='material-icons-round'>mail</span>}
+                        href={'mailto:michael.kan.mail@gmail.com'} />
+                </li>
+                <li>
+                    <ContactLink
+                        text={'michael.kan.mail@gmail.com'}
+                        icon={<span className='material-icons-round'>mail</span>}
+                        href={'mailto:michael.kan.mail@gmail.com'} />
+                </li>
+                <li>
+                    <ContactLink
+                        text={'michael.kan.mail@gmail.com'}
+                        icon={<span className='material-icons-round'>mail</span>}
+                        href={'mailto:michael.kan.mail@gmail.com'} />
+                </li>
+            </ul>
+        </section>)
 }

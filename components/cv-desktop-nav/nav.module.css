@@ -1,17 +1,31 @@
+.desktopNavWrapper {
+  display: none;
+}
+
 .desktopNav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: none;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  right: 6rem;
 }
 
 .navLink {
-    height: 75px;
-    height: 150px;
-    font-family: var(--heading-font-family);
-    font-weight: bold;
-    font-size: var(--text-md);
-    margin: 0.625rem 0rem;
-    color: white;
-    display: inline-block;
+  height: 75px;
+  width: 150px;
+  font-family: var(--heading-font-family);
+  font-weight: bold;
+  font-size: var(--text-md);
+  color: white;
+  background-color: var(--primary-background-inv);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  .desktopNav {
+    display: flex;
+  }
 }

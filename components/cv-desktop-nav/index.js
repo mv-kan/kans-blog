@@ -4,9 +4,9 @@ import styles from './nav.module.css'
 export default function CvDesktopNav() {
     return (
         <div>
-            <CvNavList 
+            <CvNavList
                 navClassName={styles.desktopNav}
-                linkClassName={styles.navLink}/>
+                linkClassName={styles.navLink} />
         </div>
     )
 } 

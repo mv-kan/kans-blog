@@ -1,6 +1,4 @@
 .cvnav {
-    /* left 0 */
-    margin-left: -1rem;
     background-color: var(--primary-background-inv);
     position: sticky;
     top: 0;

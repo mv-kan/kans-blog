@@ -18,7 +18,7 @@ export default function CvMobileNav({ handleNavToggle, navToggled }) {
                     <div className={styles.topHeader}>
                         <LogoInv />
                         <button className={styles.menuToggler} onClick={handleNavToggle}>
-                            <span className={`${styles.closeIcon} material-icons-round`}>close</span>
+                            <span className={`material-icons-round ${styles.closeIcon}`}>close</span>
                         </button>
                     </div>
                     <CvNavList 

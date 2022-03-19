@@ -44,6 +44,11 @@
     --text-light: 300;
 }
 
+::selection {
+    color: white;
+    background: var(--primary-accent);
+}
+
 html,
 body {
     padding: 0;

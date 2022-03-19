@@ -2,7 +2,7 @@ import CvMobileNav from '../cv-mobile-nav'
 import CvDesktopNav from '../cv-desktop-nav';
 import { useState } from 'react';
 import styles from './nav.module.css';
-export default function CvNav() {
+export default function CvNav({currentSection}) {
     const [navToggled, setNavToggled] = useState(false);
 
     const handleNavToggle = () => {
@@ -12,7 +12,7 @@ export default function CvNav() {
     return (
         <div className={styles.cvnav}>
             <CvMobileNav handleNavToggle={handleNavToggle} navToggled={navToggled}></CvMobileNav>
-            <CvDesktopNav />
+            <CvDesktopNav currentSection={currentSection}/>
         </div>
     )
 } 

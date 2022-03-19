@@ -24,6 +24,15 @@
   display: flex;
 }
 
+.navLink:hover {
+  color: var(--foreground-high);
+}
+
+.navLinkActive {
+  color: white;
+  background-color: var(--primary-accent);
+}
+
 @media screen and (min-width: 768px) {
   .desktopNav {
     display: flex;

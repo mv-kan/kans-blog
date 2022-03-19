@@ -1,4 +1,4 @@
-import {useState, useRef} from 'react'
+import React, { useRef, useEffect, useState } from "react";
 
 import styles from '../styles/cv.module.css'
 import utilStyles from '../styles/utils.module.css'
@@ -43,19 +43,46 @@ export default function CV() {
             delay: 300
         }
     )
-    
+
     const [visibleSection, setVisibleSection] = useState();
 
     const headerRef = useRef(null);
-    const leadershipRef = useRef(null);
-    const providerRef = useRef(null);
-    const operationsRef = useRef(null);
-
+    const profileRef = useRef(null);
+    const experienceRef = useRef(null);
+    const contactsRef = useRef(null);
     const sectionRefs = [
-        { section: "Leadership", ref: leadershipRef },
-        { section: "Providers", ref: providerRef },
-        { section: "Operations", ref: operationsRef },
-    ];  
+        { section: "Profile", ref: profileRef },
+        { section: "Experience", ref: experienceRef },
+        { section: "Contacts", ref: contactsRef },
+    ];
+
+    useEffect(() => {
+        const handleScroll = () => {
+            // const { height: headerHeight } = getDimensions(headerRef.current);
+            const { height: headerHeight } = {height: 0};
+            const scrollPosition = window.scrollY + headerHeight;
+
+            const selected = sectionRefs.find(({ section, ref }) => {
+                const ele = ref.current;
+                if (ele) {
+                    const { offsetBottom, offsetTop } = getDimensions(ele);
+                    return scrollPosition > offsetTop && scrollPosition < offsetBottom;
+                }
+            });
+
+            if (selected && selected.section !== visibleSection) {
+                setVisibleSection(selected.section);
+            } else if (!selected && visibleSection) {
+                setVisibleSection(undefined);
+            }
+        };
+
+        handleScroll();
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [visibleSection]);
 
     return (
         <div className={styles.cvLayout}>
@@ -63,7 +90,9 @@ export default function CV() {
                 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto+Slab:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet"></link>
             </Head>
 
-            <section className={`${styles.heroSection} ${utilStyles.layoutMargin}`}>
+            <section
+                className={`${styles.heroSection} ${utilStyles.layoutMargin}`}
+            >
                 <span className={styles.heroHeader}>
                     Michael Kan
                     <br />
@@ -73,8 +102,11 @@ export default function CV() {
                     <span className={`material-icons ${styles.arrowIcon}`}>keyboard_arrow_down</span>
                 </animated.div>
             </section>
-            <CvNav></CvNav>
-            <section className={`${styles.section} ${styles.profileSection} ${utilStyles.layoutContent}`} id="profile">
+            <CvNav currentSection={visibleSection}></CvNav>
+            <section
+                className={`${styles.section} ${styles.profileSection} ${utilStyles.layoutContent}`}
+                id="profile"
+                ref={profileRef}>
                 <div className={styles.profilePictureWrapper}>
                     <Image
                         src={profilePicture}
@@ -83,12 +115,15 @@ export default function CV() {
                 <h4>Michael Kan</h4>
                 <span className={utilStyles.bodyText}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit quas iste quaerat porro eos earum repudiandae fuga, ipsum ea a aperiam quo eligendi ducimus quis, suscipit tempora, blanditiis maxime omnis.</span>
             </section>
-            <div className={`${styles.signboard} ${utilStyles.layoutMargin}`} id='experience'>
-                <h3 className={`${utilStyles.noneHeaderMargin} ${utilStyles.invTextColor}`}>
-                    Experience
-                </h3>
-            </div>
-            <section className={`${styles.section} ${styles.infoSection} ${utilStyles.layoutContent}`} >
+            
+            <section
+                className={`${styles.section} ${styles.infoSection} ${utilStyles.layoutContent}`}
+                ref={experienceRef}>
+                <div className={`${styles.signboard}`} id='experience'>
+                    <h3 className={`${utilStyles.noneHeaderMargin} ${utilStyles.invTextColor}`}>
+                        Experience
+                    </h3>
+                </div>
                 <div>
                     <h5>Lorem ipsum, dolor sit</h5>
                     <span className={utilStyles.bodyText}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium iste tempore error numquam sit, vitae distinctio nostrum voluptatem ab explicabo sed architecto natus dicta, blanditiis delectus molestias reiciendis earum quas.</span>
@@ -101,8 +136,10 @@ export default function CV() {
                         <li>good</li>
                     </ul>
                 </div>
-            </section>          
-            <Contacts></Contacts>
+            </section>
+            <section ref={contactsRef}>
+                <Contacts></Contacts>
+            </section>
         </div>
     )
 } 

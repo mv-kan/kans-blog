@@ -34,6 +34,7 @@ export default function Home() {
           <div className={styles.profilePictureWrapper}>
             <Image
               src={profilePicture}
+              alt=""
             />
           </div>
           <h4>Michael Kan</h4>

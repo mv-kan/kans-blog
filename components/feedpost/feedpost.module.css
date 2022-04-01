@@ -3,6 +3,7 @@
     max-width: 640px;
     margin: auto;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .feedpost:hover {

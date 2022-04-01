@@ -1,19 +1,42 @@
 import Layout from '../components/layout'
 import Feedpost from '../components/feedpost'
-import utilStyles from '../styles/utils.module.css' 
+import utilStyles from '../styles/utils.module.css'
+import { getAllPostsData } from '../lib/post'
 
-export default function Blog() {
+
+export async function getStaticProps() {
+    const allPosts = await getAllPostsData()
+    for (var i = 0; i < allPosts.length; i++) {
+        // get i element 
+        // and delete key contentHtml
+        delete (allPosts[i].contentHtml);
+    }
+    console.log(allPosts)
+
+    return {
+        props: {
+            allPosts: allPosts
+        }
+    }
+}
+
+export default function Blog({ allPosts }) {
     return (
         <Layout>
             <div className={utilStyles.layoutContent}>
-                <Feedpost
-                    id={"cake-is-a-lie"}
-                    title={"Test title"}
-                    description={"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, sequi aliquam quam fugit laboriosam aspernatur quas veritatis blanditiis alias provident, sit in numquam eius illo facere rerum nostrum suscipit dolorum."}
-                    tags={["first tag", "second tag", "third tag"]}
-                    publishedOn={"01/02/2020"}
-                    updatedOn={"04/02/2020"}
-                />
+                {
+                    allPosts.map((post)=> {
+                        return <Feedpost
+                            key={post.postid}
+                            postid={post.postid}
+                            title={post.title}
+                            description={post.description}
+                            tags={post.tags}
+                            publishedOn={post.publishedOn}
+                            updatedOn={post.updatedOn}
+                        />
+                    })
+                }
             </div>
         </Layout>
     )

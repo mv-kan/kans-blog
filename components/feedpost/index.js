@@ -1,7 +1,7 @@
 import styles from "./feedpost.module.css"
 import Link from "next/link"
 
-export default function Feedpost({title, description, tags, publishedOn, updatedOn, id}) {
+export default function Feedpost({title, description, tags, publishedOn, updatedOn, postid}) {
     const tagList = tags.map((tag, i) => {
         return <span key={i} className={styles.tag}>{tag}</span>
     })
@@ -11,7 +11,7 @@ export default function Feedpost({title, description, tags, publishedOn, updated
     }
 
     return (
-        <Link href={`blog/${id}`}>
+        <Link href={`blog/${postid}`} passHref>
             <div className={styles.feedpost}>
                 <div className={styles.heading}>
                     <span className={styles.title}>{title}</span>

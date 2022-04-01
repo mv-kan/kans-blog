@@ -1,0 +1,44 @@
+.feedpost {
+    padding: 1rem;
+    max-width: 640px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.feedpost:hover {
+    background-color: var(--foreground-min);
+}
+
+.title {
+    font-size: var(--text-lg);
+    font-family: var(--heading-font-family);
+    color: var(--heading-black);
+    letter-spacing: 0.15px;
+    margin-bottom: 0.3rem;
+}
+
+.tag::after {
+    content: ", ";
+}
+
+.publishedOn {
+    font-size: var(--text-sm);
+    font-family: var(--caption-font-family);
+    color: var(--heading-black);
+}
+
+.tagList {
+    display: block;
+    font-size: var(--text-sm);
+    font-family: var(--caption-font-family);
+    color: var(--heading-black);
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+}
+
+.description { 
+    margin: 1rem 0;
+}
